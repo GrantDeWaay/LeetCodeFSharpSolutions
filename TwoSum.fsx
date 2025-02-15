@@ -1,8 +1,9 @@
 (*
-    Grant DeWaay F# LeetCode Solutions
+    Grant DeWaay LeetCode F# Solutions
+    Full Repo: https://github.com/GrantDeWaay/LeetCodeFSharpSolutions
     
     1. Two Sum
-    Link: https://leetcode.com/problems/two-sum/
+    Problem Link: https://leetcode.com/problems/two-sum/
 *)
 let twoSum (input: int list) (target: int) =
     let rec findMatch nums seen index =
