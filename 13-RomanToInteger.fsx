@@ -18,12 +18,13 @@ let charToInteger char =
     | _ -> 0
 
 let romanToInteger (numerals: string) =
-    let rec convert = function
+    let rec convert =
+        function
         | [] -> 0
-        | [x] -> x
-        | x :: y :: rest when x <= y -> convert rest + x +  y
+        | [ x ] -> x
+        | x :: y :: rest when x <= y -> convert rest + x + y
         | x :: y :: rest -> convert rest + x - y
-        
+
     numerals |> Seq.map charToInteger |> Seq.toList |> List.rev |> convert
 
 let romanNumeral = "CMXCIX"

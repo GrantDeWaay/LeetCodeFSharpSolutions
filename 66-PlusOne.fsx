@@ -7,12 +7,14 @@
 *)
 
 let plusOne digits =
-    let rec addOne = function
-        | [] -> [1]
+    let rec addOne =
+        function
+        | [] -> [ 1 ]
         | 9 :: rest -> 0 :: addOne rest
         | x :: rest -> x + 1 :: rest
-    digits |> List.rev |> addOne |> List.rev    
 
-let inputValues = [3; 4; 1]
+    digits |> List.rev |> addOne |> List.rev
+
+let inputValues = [ 3; 4; 1 ]
 
 printfn "%A" (plusOne inputValues)
